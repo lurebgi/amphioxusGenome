@@ -20,9 +20,9 @@ Polishing the assembly using pilon
 sbatch pilon_bjbf.sh
 ```
 
-Calculating contig coverage of Illumina reads
+Calculating contig coverage of Illumina reads and separate contigs
 ```
-# bjbj
+# bjbf
 sbatch IlluminaCov_bjbf.sh
 paste all_p_ctg.fa.arrow2.fasta.bj.sorted.bam.depth.g all_p_ctg.fa.arrow2.fasta.bf.sorted.bam.depth.g > bj-bf.coverage
 cat bj-bf.coverage | awk '$7>10' > bj.list
@@ -31,4 +31,16 @@ grep 000485F bj-bf.coverage >> bj.list
 grep 000464F bj-bf.coverage >> bf.list
 grep 000469F  bj-bf.coverage >> bf.list
 grep 000465F  bj-bf.coverage >> bf.list
+```
+
+Separating Illumina reads
+```
+# bjbf
+sbatch split.read_bjbf.sh
+```
+
+Separating Pacbio reads
+```
+# bjbf
+sbatch split.read-pacbio__bjbf.sh
 ```
