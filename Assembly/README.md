@@ -7,4 +7,10 @@ sbatch bjbj_falcon.sh
 sbatch
 ```
 
+Polishing the assembly using arrow
+```
+# bjbf
+sbatch bjbf_pbmm.sh
+sbatch bjbf_arrow_split.sh
+```
 ## 
