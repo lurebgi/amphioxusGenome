@@ -11,14 +11,15 @@
 
 module load pilon bwa samtools pbsmrt
 
-
-genome=all_p_ctg.fa
+genome=$1
 
 pbmm2 index $genome $genome.mmi
 
 cp $genome.mmi $TMPDIR
 
-cat bam.list | while read line; do  pbmm2 align /proj/luohao/amphioxus/data/pacbio_bj/$line  $TMPDIR/$genome.mmi -j 20 --min-length 1000 | samtools sort -@ 20 -O BAM -o $TMPDIR/$line.bam; done
+#cat bam.list | while read line; do  pbmm2 align /proj/luohao/amphioxus/data/pacbio_bj/$line  $TMPDIR/$genome.mmi -j 20 --min-length 1000 | samtools sort -@ 20 -O BAM -o $TMPDIR/$line.bam; done
+cat bam.list | while read line; do  pbmm2 align $line  $TMPDIR/$genome.mmi -j 20 --min-length 1000 | samtools sort -@ 20 -O BAM -o $TMPDIR/`basename $line`.bam; done
+
 
 samtools merge -@ 16 $TMPDIR/$genome.merged.bam $TMPDIR/*.bam
 

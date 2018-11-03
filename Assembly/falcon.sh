@@ -9,6 +9,9 @@
 #SBATCH --output=raw.fc-%j.out
 #SBATCH --error=raw.fc-%j.err
 
+cft=$1
+unzip=$2
+
 module unload  pbsmrt mummer samtools minimap2
 export PATH=/scratch/luohao/software/minimap2-2.12_x64-linux/:$PATH
 source /scratch/luohao/software/falcon/fc_env_180904/bin/activate
@@ -18,11 +21,11 @@ source /scratch/luohao/software/falcon/fc_env_180904/bin/activate
 /proj/luohao/amphioxus/*bam  | while read line;  do bam2fasta -u $line -o $line.fa ; done
 
 # falcon
-fc_run.py fc_run.bjbf.cfg
+fc_run.py $cfg
 
 # falcon unzip
 #python /apps/pbsmrt/20171207/bin/fc_unzip.py fc_unzip.cfg
-fc_unzip.py fc_unzip.bjbf.cfg
+fc_unzip.py $unzip
 
 #trace reads
 #python -m falcon_kit.mains.fetch_reads

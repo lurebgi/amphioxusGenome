@@ -1,8 +1,8 @@
-## Falcon assembly
+## Diploid assembly
 Assemble the hybrid genomes directly using raw reads
 ```
 # bjbf
-sbatch bjbj_falcon.sh
+sbatch falcon.sh fc_run.bjbf.cfg fc_unzip.bjbf.cfg
 # bbbf
 sbatch
 ```
@@ -10,8 +10,8 @@ sbatch
 Polishing the assembly using arrow
 ```
 # bjbf
-sbatch bjbf_pbmm.sh
-sbatch bjbf_arrow_split.sh
+sbatch bjbf_pbmm.sh all_p_ctg.fa
+sbatch bjbf_arrow_split.sh all_p_ctg.fa
 ```
 ## Separating parental reads
 Polishing the assembly using pilon
@@ -44,3 +44,22 @@ Separating Pacbio reads
 # bjbf
 sbatch split.read-pacbio__bjbf.sh
 ```
+
+## Haploid Assembly
+Falcon assembly
+```
+# bj
+sbatch falcon.sh fc_run.bj.cfg
+# bf
+sbatch falcon.sh fc_run.bf.cfg
+```
+
+canu assembly
+```
+# bj
+sbatch canu.sh 'bj.list.pacbio-read.fa.part.*' 390m
+# bf
+sbatch canu.sh 'bf.list.pacbio-read.fa.part.*' 490m
+```
+
+quickmerge

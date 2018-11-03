@@ -12,7 +12,7 @@
 module load pilon bwa samtools pbsmrt
 
 
-genome=all_p_ctg.fa
+genome=$1
 rsync  $genome $genome.fai $TMPDIR
 
 ## split genome to speed up arrow polishing
