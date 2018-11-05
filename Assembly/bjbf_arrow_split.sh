@@ -18,7 +18,7 @@ rsync  $genome $genome.fai $TMPDIR
 
 ## split genome to speed up arrow polishing
 mkdir fa_split
-cat all_p_ctg.fa.fai | sort -k2R | split -l 20 - fa_split/
+cat $genome.fai | sort -k2R | split -l 20 - fa_split/
 
 ls fa_split | grep -v fa | while read line; do
 
