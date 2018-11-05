@@ -23,7 +23,6 @@ cat bam.list | while read line; do  pbmm2 align $line  $TMPDIR/$genome.mmi -j 20
 
 samtools merge -@ 16 $TMPDIR/$genome.merged.bam $TMPDIR/*.bam
 
-mv $TMPDIR/$genome.merged.bam .
-samtools index $genome.merged.bam
+samtools index $TMPDIR/$genome.merged.bam
 pbindex $TMPDIR/$genome.merged.bam
-mv $TMPDIR/$genome.merged.bam .
+mv $TMPDIR/$genome.merged.bam $TMPDIR/$genome.merged.bam.bai $TMPDIR/$genome.merged.bam.pbi .
