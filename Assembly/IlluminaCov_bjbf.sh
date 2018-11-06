@@ -41,6 +41,7 @@ samtools depth -m 300  $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-
 
 
 #bj
+size=bj
 read1=/proj/luohao/amphioxus/data/illumina_bj/NGS/Project_s025g01133-g01134-r04042-1_20171120_6samples/Sample_R17017994LD01/R17017994LD01_combined_R1.fastq.gz
 read2=/proj/luohao/amphioxus/data/illumina_bj/NGS/Project_s025g01133-g01134-r04042-1_20171120_6samples/Sample_R17017994LD01/R17017994LD01_combined_R2.fastq.gz
 
