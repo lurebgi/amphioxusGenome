@@ -28,6 +28,7 @@ bwa index $TMPDIR/$genome
 samtools faidx $genome0
 bedtools makewindows -g $genome0.fai -w 50000 > $genome.scf-len.50k-win
 cut -f 1,2 $genome0.fai > $genome.fai.g
+cut -f 1,2 $genome0.fai | awk '{print $1"\t1\t"$2}' > $genome.fai.bed
 
 #bf
 size=bf
