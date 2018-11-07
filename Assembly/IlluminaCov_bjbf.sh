@@ -37,8 +37,8 @@ read2=/proj/luohao/amphioxus/data/illumina_bf/bf_R2.fq.gz
 
 bwa mem -t 20  $TMPDIR/$genome $read1 $read2  |  samtools sort -@ 20 -O BAM -o $TMPDIR/$genome.$size.sorted.bam  -
 samtools index $TMPDIR/$genome.$size.sorted.bam
-samtools depth -m 300 -Q 59 $genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.fai.bed -g $genome.fai.g -b - -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.g
-samtools depth -m 300  $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.scf-len.50k-win  -b - -g $genome.fai.g -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.50k
+samtools depth -m 300 -Q 59 $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.fai.bed -g $genome.fai.g -b - -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.g
+samtools depth -m 300 -Q 59 $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.scf-len.50k-win  -b - -g $genome.fai.g -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.50k
 
 
 #bj
@@ -48,5 +48,5 @@ read2=/proj/luohao/amphioxus/data/illumina_bj/NGS/Project_s025g01133-g01134-r040
 
 bwa mem -t 20  $TMPDIR/$genome $read1 $read2  |  samtools sort -@ 20 -O BAM -o $TMPDIR/$genome.$size.sorted.bam  -
 samtools index $TMPDIR/$genome.$size.sorted.bam
-samtools depth -m 300 -Q 59 $genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.fai.bed -g $genome.fai.g -b - -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.g
-samtools depth -m 300  $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.scf-len.50k-win  -b - -g $genome.fai.g -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.50k
+samtools depth -m 300 -Q 59 $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.fai.bed -g $genome.fai.g -b - -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.g
+samtools depth -m 300 -Q 59 $TMPDIR/$genome.$size.sorted.bam  | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' |  bedtools map -a $genome.scf-len.50k-win  -b - -g $genome.fai.g -c 4 -o median,mean,count  > $genome.$size.sorted.bam.depth.50k
