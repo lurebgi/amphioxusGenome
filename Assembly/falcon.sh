@@ -9,7 +9,7 @@
 #SBATCH --output=raw.fc-%j.out
 #SBATCH --error=raw.fc-%j.err
 
-cft=$1
+cfg=$1
 unzip=$2
 
 module unload  pbsmrt mummer samtools minimap2
