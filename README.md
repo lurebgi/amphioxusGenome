@@ -9,3 +9,5 @@ col=c("#E41A1C", "#377EB8" ,"#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628
 
 species color
 c("#FC8D62","#8DA0CB", "#E78AC3", "#A6D854")
+
+https://www.colorhexa.com/
