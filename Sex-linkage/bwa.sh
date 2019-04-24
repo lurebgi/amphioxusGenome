@@ -26,7 +26,7 @@ fi
 #bwa mem -t $cpu  $TMPDIR/$genome $read1 $reads  |  samtools sort -@ $cpu  -O BAM -o $TMPDIR/$genome.$size.sorted.bam  -
 #mv $TMPDIR/$genome.$size.sorted.bam .
 
-bwa mem -t $cpu $genome $read1 $reads  |  samtools sort -@ $cpu  -O BAM -o $genome.$size.sorted.bam  -
+bwa mem -t $cpu -R $(echo "@RG\tID:$size\tSM:$id"_"$size\tLB:$size"_"$size\tPL:ILLUMINA")  $genome $read1 $read2  |  samtools sort -@ $cpu  -O BAM -o $genome.$size.sorted.bam  -
 samtools index $genome.$size.sorted.bam
 
 # entire contig
