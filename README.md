@@ -9,5 +9,7 @@ col=c("#E41A1C", "#377EB8" ,"#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628
 
 species color
 c(bj "#FC8D62",  bf_1 "#8DA0CB",  bf_2 "#998dcb" , bb "#E78AC3", "#A6D854")
+chicken zebrafish mouse human
+"#2372a8","#fff100","#acd386","#379838"
 
 https://www.colorhexa.com/
