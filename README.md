@@ -1,15 +1,1 @@
 # amphioxusGenome
-
-Maker
-https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2
-
-
-chr Color
-col=c("#E41A1C", "#377EB8" ,"#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF","#66C2A5", "#FFD92F", "#E5C494" ,"#B3B3B3", "#8DD3C7", "#FFFFB3" ,"#BEBADA" ,"#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5" ))
-
-species color
-c(bj "#FC8D62",  bf_1 "#8DA0CB",  bf_2 "#998dcb" , bb "#E78AC3", "#A6D854")
-chicken zebrafish mouse human
-"#2372a8","#fff100","#acd386","#379838"
-
-https://www.colorhexa.com/
