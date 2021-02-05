@@ -17,4 +17,4 @@ This study also includes analyses of [segmental duplications], [TADs], [Hox gene
 [Sex chromosome]:https://github.com/lurebgi/amphioxusGenome/tree/master/Sex-linkage
 [segmental duplications]:https://github.com/lurebgi/amphioxusGenome/tree/master/segmental_duplication
 [TADs]:https://github.com/lurebgi/amphioxusGenome/tree/master/Hi-C
-[Hox gene evolution]:https://github.com/lurebgi/amphioxusGenome/tree/master/Hi-C/Hox
+[Hox gene evolution]:https://github.com/lurebgi/amphioxusGenome/tree/master/Hox
