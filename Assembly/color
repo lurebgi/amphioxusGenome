@@ -4,7 +4,10 @@ https://gist.github.com/darencard/bb1001ac1532dd4225b030cf0cd61ce2
 
 
 chr Color
-col=c("#E41A1C", "#377EB8" ,"#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF","#66C2A5", "#FFD92F", "#E5C494" ,"#B3B3B3", "#8DD3C7", "#FFFFB3" ,"#BEBADA" ,"#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5" ))
+col=c("#E41A1C", "#377EB8" ,"#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF","#66C2A5", "#FFD92F" ,"#B3B3B3", "#8DD3C7", "#FFFFB3" ,"#BEBADA" ,"#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5" ))
+col16 <- c("#8BC395","#A6CEE3","#3688AD","#8BC395" ,"#40A635","#919D5F","#F99392","#f26b6b","#E83C2D","#fcc29a" ,"#FE8205","#E39970","#BFA5CF","#917099","#E7E099","#DEB969","#B15928")
+
+breaks=c("cac4","cac2","cac3","cac17","cac5","cac6","cac7","cac8","cac9","cac10","cac11","cac12","cac13","cac14","cac15","cac16","cac1")
 
 species color
 c(bj "#FC8D62",  bf_1 "#8DA0CB",  bf_2 "#998dcb" , bb "#E78AC3", "#A6D854")
