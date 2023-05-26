@@ -12,6 +12,9 @@ We used individually re-sequenced data of male and female population to identify
 ## Other analyses
 This study also includes analyses of [segmental duplications], [TADs], [Hox gene evolution].
 
+The annotation files are available from this link: 
+https://www.dropbox.com/scl/fo/7es66dlyocuwmvhx5kv0s/h?dl=0&rlkey=awb9n16f1smehkxkyuy36wa2g
+
 [Assembly]:https://github.com/lurebgi/amphioxusGenome/tree/master/Assembly
 [Annotation]:https://github.com/lurebgi/amphioxusGenome/tree/master/annotation
 [Sex chromosome]:https://github.com/lurebgi/amphioxusGenome/tree/master/Sex-linkage
